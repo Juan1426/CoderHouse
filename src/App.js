@@ -1,5 +1,5 @@
 
-import HomeScreen from "./components/HomeScreen/HomeScreen";
+import HomeScreen from "./components/ItemListContainer/HomeScreen";
 import NavBar from "./components/NabBar/NavBar"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
@@ -9,7 +9,7 @@ function App() {
     <div>
       <NavBar />
       <div className="main-app">
-        <HomeScreen />
+        <HomeScreen greeting=" #TextoPocoOriginal" />
       </div>
     </div>
   );
