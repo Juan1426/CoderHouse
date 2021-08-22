@@ -1,5 +1,5 @@
 
-import HomeScreen from "./components/ItemListContainer/HomeScreen";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar"
 import Clock from "./components/CompClase/Clock";
 import ClickTracker from "./components/CompClase/ClickTracker";
@@ -11,11 +11,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="main-app">
-        <HomeScreen greeting=" #TextoPocoOriginal" />
-      </div>
-      <Clock />
-      <ClickTracker />
+      <ItemListContainer />
     </div>
   );
 }

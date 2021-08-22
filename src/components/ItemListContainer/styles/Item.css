@@ -1,0 +1,9 @@
+.item_container{
+    background-color: rgba(0000, 0000, 0000, 0.2);
+    margin: 1rem;
+    width: 10rem;
+}
+
+.item_container li{
+    list-style: none;
+}
