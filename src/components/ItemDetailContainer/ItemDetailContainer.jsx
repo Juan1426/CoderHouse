@@ -1,5 +1,6 @@
-import React, {useState,useEffect } from "react"
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { UIContext } from '../../context/UIContext'
 import pedirDatos from "../../helpers/pedirDatos"
 import ItemDetail from "./ItemDetail"
 

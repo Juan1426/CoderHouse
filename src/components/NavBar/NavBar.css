@@ -1,4 +1,26 @@
+Link{
+    line-height: 1rem;
+}
+
+.SportWear-logo{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.SportWear-logo img{
+    height: 1.8rem;
+    width: 1.8rem;
+    margin: 0.4rem;
+}
+
+.SportWear-logo h2{
+    margin-top: 0.4rem ;
+}
 
 .navbar-nav{
     margin-left: auto;
+}
+
+.mx-1{
+    color: white;
 }

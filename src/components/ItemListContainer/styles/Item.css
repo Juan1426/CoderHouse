@@ -1,7 +1,8 @@
 .item_container{
-        width: 90%;
-        margin: 0.8rem 5%;
-        padding: 0.2rem;
+    width: 90%;
+    margin: 0.8rem 5%;
+    padding: 0.2rem;
+
 }
 
 .item_container li{
@@ -13,12 +14,12 @@
     flex-wrap: nowrap;
     align-items: center;
     margin-top: auto;
-    height: 20rem;
+    height: 80%;
     margin: 0.4rem 0;
 }
 
 .img_container img{
-    height: fit-content;
+    height: 100%;
     width: 100%;
 }
 
@@ -28,9 +29,7 @@
         width: 44%;
     }
 
-    .img_container{
-        height: 23rem;
-    }
+
 }
 
 @media (min-width : 768px) {
@@ -39,8 +38,6 @@
         width: 30%;
     }
 
-    .img_container{
-        height: 26rem;
-    }
+
 }
 

@@ -3,7 +3,7 @@ import React, {useState} from "react"
 const ClickTracker = () =>{
     
     const [contador, setContador] = useState(
-
+        
         {
             clicks: 0,
             fecha : null

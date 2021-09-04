@@ -12,7 +12,7 @@ const Item = ({nombre, precio, desc, img, id}) => {
                     <img src={img} />
                 </div>
                 <p>{desc}</p>
-                <p>{precio}</p>               
+                <p>${precio}</p>               
                 <Link to={`/detail/${id}`} className="btn btn-success">Ver Detalle</Link>
             </li>
         </div>
