@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { UIContext } from '../../context/UIContext'
+import { getFirestore } from '../../firebase/config'
 import pedirDatos from "../../helpers/pedirDatos"
 import ItemDetail from "./ItemDetail"
 
@@ -8,19 +9,32 @@ import ItemDetail from "./ItemDetail"
 const ItemDetailContainer = () => {
 
         /*inicio los estados*/
- 
+        const [loading, setLoading] = useContext(UIContext)
         const { itemId } = useParams()        
         const [item, setItem] = useState(null)
-        const [loading, setLoading] = useState(false)
+        
         
         useEffect(() => {
 
+            const db = getFirestore()
+            const producos = db.collection("Productos")
+            const item = productos.doc(itemId)
+
+            item.get()
+                .then((doc) => {
+                setItem({...doc.data(), id: doc.id})
+            })
+                .finally(()=> {setLoading(false)})
+            /*
             setLoading(true)
             
             pedirDatos()
                 .then( res=> {
-                    setItem(res.find(prod => prod.id=== parseInt(itemId))) /* lo tengo que parsear porque en el array ID es tipo number, pero el param es String, lo tengo que igualar para comparar*/
+                    setItem(res.find(prod => prod.id=== parseInt(itemId))) // lo tengo que parsear porque en el array ID es tipo number, pero el param es String, lo tengo que igualar para comparar
                 })
+
+                 */
+
                 .finally(() => {setLoading(false)})
                 
 

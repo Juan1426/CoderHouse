@@ -16,14 +16,14 @@ export const CartProvider = ({children}) => {
         ])
     }
 
-    //todas estas funciones son accesibles a todos los elementos "children" que envuelve eñ CartContextProvider
+    //todas estas funciones son accesibles a todos los elementos "children" que envuelve el CartContextProvider
 
     //elimina un producto si coincide con el ID
     const eliminarDelCarrito = (id) => {
         setCarrito( carrito.filter(prod => prod.id !== id) )
     }
 
-
+    //suma la cantidad de unidades
     const cantidadCarrito = () => {
         return carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
     }
@@ -33,17 +33,18 @@ export const CartProvider = ({children}) => {
         setCarrito([])
     }
 
-
     const isInCart = (id) => {
         return carrito.some(el => el.id == id)
     }
 
     //Aca deberia armar una funcion que devuelva el costo total de carrito
-    /*********/
+    const sumaTotal = () => {
+        return carrito.reduce((acc, prod) => acc + prod.cantidad * Number(prod.precio), 0)
+    }
 
     //envio todas las funciones como parametros de "value"
     return (
-        <CartContext.Provider value={{carrito, isInCart, agregarAlCarrito, eliminarDelCarrito, cantidadCarrito, vaciarCarrito}}>
+        <CartContext.Provider value={{carrito, isInCart, agregarAlCarrito, eliminarDelCarrito, cantidadCarrito, vaciarCarrito, sumaTotal}}>
             {children}
         </CartContext.Provider>
     )

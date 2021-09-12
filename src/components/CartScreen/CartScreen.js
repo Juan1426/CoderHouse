@@ -3,10 +3,10 @@ import { CartContext } from '../../context/CartContext'
 import { BsFillTrashFill } from 'react-icons/bs'
 export const CartScreen = () => {
 
-    const {carrito, eliminarDelCarrito, vaciarCarrito} = useContext(CartContext)
+    const {carrito, eliminarDelCarrito, vaciarCarrito, sumaTotal} = useContext(CartContext)
 
     return (
-        <div>
+        <>
             {/*Cambiar nombre aca?*/}
             <h1>Resumen de compra</h1>
 
@@ -21,10 +21,12 @@ export const CartScreen = () => {
             ))}
 
             <hr/>
-            {/*Aca deberia ir un elemento que muestre el precio/costo total del Carrito*/}
+            {/*Encontrar por que no funciona cuando paso el valor "sumaTotal", pero si con la funcion */}
+            <h2>Total: ${carrito.reduce((acc, prod) => acc + prod.cantidad * Number(prod.precio), 0)}</h2>
+            
             {/*Cuando el Carrito este Vacio deberia aparecer un boton "Volver* al listado de productos*/}
 
             <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar carrito</button>
-        </div>
+        </>
     )
 }
