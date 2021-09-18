@@ -9,16 +9,22 @@ import ItemDetail from "./ItemDetail"
 const ItemDetailContainer = () => {
 
         /*inicio los estados*/
-        const [loading, setLoading] = useContext(UIContext)
-        const { itemId } = useParams()        
+        const {loading, setLoading} = useContext(UIContext)
+        const { catId } = useParams()        
         const [item, setItem] = useState(null)
         
         
         useEffect(() => {
 
             const db = getFirestore()
-            const producos = db.collection("Productos")
-            const item = productos.doc(itemId)
+
+            let productos = db.collection("Productos") 
+            if (catId) {
+
+                productos = productos.where("category_id", "==", catId)
+            }
+
+            const item = productos.doc(catId)
 
             item.get()
                 .then((doc) => {
@@ -38,7 +44,7 @@ const ItemDetailContainer = () => {
                 .finally(() => {setLoading(false)})
                 
 
-        }, [itemId]) /*Se monta el componente cuando registra cambios en ItemId. Si no pongo nada, solo lo hace una vez*/
+        }, [catId]) /*Se monta el componente cuando registra cambios en ItemId. Si no pongo nada, solo lo hace una vez*/
 
         return (
             <div>

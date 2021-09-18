@@ -5,7 +5,7 @@ export const stock = [
         nombre : "zapatillas",
         desc : "Remera lisa sin estampado",
         precio : "5000",
-        img: "/files/ropa/zapatillas/zapatillas.jpg",
+        img: "/files/ropa/zapatillas/zapatillasConverseNegras.jpg",
         stock: 10
         
     },

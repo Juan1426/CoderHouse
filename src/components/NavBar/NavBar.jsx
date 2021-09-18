@@ -25,11 +25,10 @@ const NavBar = () =>{
 
                         <Nav>
                             <NavDropdown id="nav-dropdown-dark-example" title="Categorias" menuVariant="dark">
-                                <NavDropdown.Item href="#action/3.1"><Link className="mx-1" to={"/category/remeras"}>Remeras</Link></NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2"><Link className="mx-1" to={"/category/camisas"}>Camisas</Link></NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3"><Link className="mx-1" to={"/category/camperas"}>Camperas</Link></NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3"><Link className="mx-1" to={"/category/zapatillas"}>Calzado</Link></NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3"><Link className="mx-1" to={"/category/buzos"}>buzos</Link></NavDropdown.Item>
+                                <NavDropdown.Item className="mx-1" to={"/category/remeras"} as={Link}>Remeras</NavDropdown.Item>
+                                <NavDropdown.Item className="mx-1" to={"/category/calzado"} as={Link}>Calzado</NavDropdown.Item>
+                                <NavDropdown.Item className="mx-1" to={"/category/buzos"} as={Link}>Buzos</NavDropdown.Item>
+                                
                             </NavDropdown>
                         </Nav>
                           

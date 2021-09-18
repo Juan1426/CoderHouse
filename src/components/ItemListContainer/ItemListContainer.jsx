@@ -17,14 +17,35 @@ const ItemListContainer = () => {
       
     useEffect( ()=> {
 
+        setLoading(true)
+
         const db = getFirestore()
         const productos = db.collection("Productos")
 
-        productos.get().then((response) => {
-            const data = response.docs.map((doc) => ({...doc.data(), id: doc.id}))
-
-            setData(data)
-        })      
+        if(catId) {
+            const filtrado = productos.where("category", "==", catId)
+            filtrado.get()
+                .then((response) => {
+                    const data = response.docs.map((doc) => ({...doc.data(), id: doc.id}))
+                    console.log(data)
+                    setData(data)
+                })
+                .finally(() => {
+                    setLoading(false)
+                })
+        
+        }else {
+            productos.get() 
+                .then((response) => {
+                    const data = response.doc.map((doc) => ({...doc.data(), id: doc.id}))
+                    console.log(data)
+                    setData(data)
+                })
+                .finally(() => {
+                    setLoading(false)
+                })
+        }
+             
         /** setLoading(true)
         pedirDatos()
             .then(res => {
