@@ -37,7 +37,7 @@ const ItemListContainer = () => {
         }else {
             productos.get() 
                 .then((response) => {
-                    const data = response.doc.map((doc) => ({...doc.data(), id: doc.id}))
+                    const data = response.docs.map((doc) => ({...doc.data(), id: doc.id}))
                     console.log(data)
                     setData(data)
                 })
