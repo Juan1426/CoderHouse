@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { BsFillTrashFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
+
 export const CartScreen = () => {
 
     const {carrito, eliminarDelCarrito, vaciarCarrito, sumaTotal} = useContext(CartContext)
@@ -22,11 +24,17 @@ export const CartScreen = () => {
 
             <hr/>
             {/*Encontrar por que no funciona cuando paso el valor "sumaTotal", pero si con la funcion */}
-            <h2>Total: ${carrito.reduce((acc, prod) => acc + prod.cantidad * Number(prod.precio), 0)}</h2>
+            <h2>Total: ${sumaTotal()}</h2>
             
             {/*Cuando el Carrito este Vacio deberia aparecer un boton "Volver* al listado de productos*/}
 
             <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar carrito</button>
+            
+            <Link to="/checkout">
+                <button className="btn btn-success">
+                    Terminar mi compra
+                </button>
+            </Link>
         </>
     )
 }

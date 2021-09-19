@@ -19,6 +19,7 @@ import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 /*Styles*/
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
+import Checkout from "./components/Checkout/Checkout";
 
 
 
@@ -47,6 +48,10 @@ function App() {
 
             <Route exact path="/cart">
                 <CartScreen/>
+            </Route>
+
+            <Route exact path ="/checkout">
+                <Checkout />
             </Route>
 
             <Footer />
