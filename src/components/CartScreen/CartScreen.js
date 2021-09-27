@@ -30,9 +30,8 @@ export const CartScreen = () => {
 
             <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar carrito</button>
             
-            {!carrito.lenght
-                ? <div></div>      
-                :<Link to="/checkout">
+            {carrito.length &&      
+                <Link to="/checkout">
                     <button className="btn btn-success">
                         Terminar mi compra
                     </button>
