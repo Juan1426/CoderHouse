@@ -30,11 +30,13 @@ export const CartScreen = () => {
 
             <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar carrito</button>
             
-            <Link to="/checkout">
-                <button className="btn btn-success">
-                    Terminar mi compra
-                </button>
-            </Link>
+            {!carrito.lenght
+                ? <div></div>      
+                :<Link to="/checkout">
+                    <button className="btn btn-success">
+                        Terminar mi compra
+                    </button>
+                </Link>}
         </>
     )
 }

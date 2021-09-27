@@ -2,11 +2,12 @@
     width: 90%;
     margin: 0.8rem 5%;
     padding: 0.2rem;
-
+    
 }
 
 .item_container li{
     list-style: none;
+    
 }
 
 .img_container{
