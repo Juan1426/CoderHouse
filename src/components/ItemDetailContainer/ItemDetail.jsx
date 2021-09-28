@@ -21,27 +21,25 @@ const ItemDetail = ({id, nombre, precio, desc, img, category, stock}) => {
 }    
 
     return(
-        <>
+        <div className="main-container">
             <div className="itemDetail_container">
                 <h2>{nombre}</h2>                
                 <div className="img_container">
                     <img src={img} alt={nombre}/>
                 </div>
-                <p>Precio: {precio}</p>
-                <p>{desc}</p>  
-                <Link className="btn btn-success" to={"/"}>Volver</Link>          
+                <h3>Precio: ${precio}</h3>
+                <p>{desc}</p>                           
             </div>
-            <Counter 
-                max={stock} 
-                cantidad={cantidad} 
-                setCantidad={setCantidad} 
-                agregar={handleAdd} 
-                agregado={isInCart(id)}
-            />
-            <div className="itemDetail_buttons">
-            
+            <div className="counter-container">
+                <Counter 
+                    max={stock} 
+                    cantidad={cantidad} 
+                    setCantidad={setCantidad} 
+                    agregar={handleAdd} 
+                    agregado={isInCart(id)}
+                />               
             </div>
-        </>
+        </div>
     )
 
 }

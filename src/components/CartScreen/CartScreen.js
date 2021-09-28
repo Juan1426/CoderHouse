@@ -33,7 +33,7 @@ export const CartScreen = () => {
             {carrito.length &&      
                 <Link to="/checkout">
                     <button className="btn btn-success">
-                        Terminar mi compra
+                        Ir al Carrito
                     </button>
                 </Link>}
         </>

@@ -2,34 +2,30 @@
     width: 90%;
     margin: 0.8rem 5%;
     padding: 0.2rem;
-    
+    display: flex;
 }
 
 .item_container li{
-    list-style: none;
-    
+    list-style: none;   
 }
 
 .img_container{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-top: auto;
     height: 80%;
     margin: 0.4rem 0;
 }
 
 .img_container img{
-    height: 100%;
     width: 100%;
 }
+
+
+
 
 @media (min-width : 426px) {
     .item_container{
         margin: 0.8rem 3%;
         width: 44%;
     }
-
 
 }
 
@@ -38,7 +34,5 @@
         margin: 0.8rem 1.5%;
         width: 30%;
     }
-
-
 }
 

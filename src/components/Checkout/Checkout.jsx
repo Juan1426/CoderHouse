@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import generarOrden from "../../firebase/generarOrden";
 import Swal from "sweetalert2";
 
+import "./Checkout.css"
 
 const Checkout = (vaciarCarrito) => {
 
@@ -48,11 +49,9 @@ const Checkout = (vaciarCarrito) => {
     }
 
     return (
-            <div>
+            <div className="checkout-container">
                 <h2>Checkout</h2>
-                <hr/>
                 <div>
-
                 {!carrito.lenght==[]
                    ? <h3>El Carrito esta vacio</h3> 
                    : 
