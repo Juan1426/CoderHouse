@@ -1,0 +1,8 @@
+.mainCartScreen-container{
+    min-height: calc(100vh - 8.4rem  );
+}
+
+.mainCartScreen{
+    padding-top: 5rem;
+    padding-left: 5rem;
+}

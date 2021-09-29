@@ -37,7 +37,7 @@ export const CartProvider = ({children}) => {
         return carrito.some(el => el.id == id)
     }
 
-    //Aca deberia armar una funcion que devuelva el costo total de carrito
+    //funcion que devuelva el costo total de carrito
     const sumaTotal = () => {
         return carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     }

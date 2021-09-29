@@ -1,12 +1,13 @@
 import React from "react"
 
+import "./Footer.css"
+
 const Footer = () => {
 
     return(
-        <footer>
+        <footer className="footer">
             <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
                 <div className="container">
-
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <a className="nav-link active">Contáctanos</a>
