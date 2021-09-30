@@ -49,44 +49,51 @@ const Checkout = (vaciarCarrito) => {
     }
 
     return (
-            <div className="checkout-container">
+            <div className="checkout-mainContainer">
                 <h2>Checkout</h2>
-                <div>
+                <div className="checkout-container ">
                 {!carrito.lenght==[]
                    ? <h3>El Carrito esta vacio</h3> 
                    : 
                     <form onSubmit={handleSubmit}>
-                        <input 
-                            type="text"
-                            value={values.nombre}
-                            onChange = {handleImputChange}
-                            name = "nombre"
-                            placeholder="nombre"
-                        />
-                  
-                        <input 
-                            type="tel"
-                            value={values.tel}
-                            onChange = {handleImputChange}
-                            name = "tel"
-                            placeholder="telefono"
-                     />
-                   
-                        <input 
-                            type="email"
-                            value={values.email}
-                            onChange = {handleImputChange}
-                            name = "email"
-                            placeholder="email"
-                        />
+                        <div>
+                            <input 
+                                type="text"
+                                value={values.nombre}
+                                onChange = {handleImputChange}
+                                name = "nombre"
+                                placeholder="nombre"
+                            />
+                        </div>
 
-                        <input 
-                            type="email"
-                            value={values.confEmail}
-                            onChange = {handleImputChange}
-                            name = "confEmail"
-                            placeholder="confirm email"
-                        />
+                        <div>
+                            <input 
+                                type="tel"
+                                value={values.tel}
+                                onChange = {handleImputChange}
+                                name = "tel"
+                                placeholder="telefono"
+                            />
+                        </div>
+                        <div>
+                            <input 
+                                type="email"
+                                value={values.email}
+                                onChange = {handleImputChange}
+                                name = "email"
+                                placeholder="email"
+                            />
+                        </div>
+
+                        <div>
+                            <input 
+                                type="email"
+                                value={values.confEmail}
+                                onChange = {handleImputChange}
+                                name = "confEmail"
+                                placeholder="confirm email"
+                            />  
+                        </div>
 
                          <button type="submit">Submit</button>
                     </form>
