@@ -1,3 +1,4 @@
 .main-itemListCont{
     max-width: 70rem;
+    min-height: calc(100vh - 8.5rem);
 }
