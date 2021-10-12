@@ -7,9 +7,7 @@ import "./Checkout.css"
 
 const Checkout = (vaciarCarrito) => {
 
-    const {carrito, sumaTotal } = useContext(CartContext) //en el corchete traigo la function sumatotal() de CartContext
-    
-    //creo mi objeto de order(n) con la info de la compra
+    const {carrito, sumaTotal } = useContext(CartContext) 
     const [values, setValues] = useState({
         nombre : "",
         tel: "",
@@ -27,7 +25,7 @@ const Checkout = (vaciarCarrito) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        //aca meto las validaciones. #Preguntar si existe algo como ExpressValidator en React#
+        //Validaciones
         if (values.nombre.length >3 && values.email.length > 3 && values.tel.length > 8 && values.email == values.confEmail ) {
             generarOrden(values, carrito, sumaTotal)
                 .then( res => {    

@@ -11,7 +11,6 @@ export const Counter = ({max, cantidad, setCantidad, agregar, agregado}) => {
     console.log(agregado)
 
     //funciones que consumen los botones
-
     const handleSumar = () => {
         if (cantidad < max) {
             setCantidad(cantidad + 1)
@@ -33,11 +32,7 @@ export const Counter = ({max, cantidad, setCantidad, agregar, agregado}) => {
                         <div className="container">
                             <Link to="/cart" className="btn btn-success terminarCompra">Terminar mi compra</Link>
                             <Link className="btn btn-danger" to={"/"}>Volver</Link> 
-                            {/*carrito.map(prod => (
-                                <small key={prod.id}>
-                                    <button className="btn btn-warning" onClick={() => eliminarDelCarrito(prod.id)}>cancelar</button>
-                                </small>
-                            ))*/}
+
                         </div>
                         :
                         <div className="container counter">

@@ -18,7 +18,6 @@ export const CartScreen = () => {
                         <h3>{prod.nombre}</h3>
                         <p>Cantidad: {prod.cantidad}</p>
                         <p>Precio: ${prod.precio * prod.cantidad}</p>
-                        {/*Reemplazar los iconos de React, no me gustan*/}
                         <div className="tacho"  onClick={() => eliminarDelCarrito(prod.id)}><BsFillTrashFill /><span>eliminar producto</span></div>
                     </div>
                 ))}

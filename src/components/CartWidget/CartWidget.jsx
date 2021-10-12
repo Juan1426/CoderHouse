@@ -11,8 +11,6 @@ const CartWidget = () => {
         <Link to="/cart">
             <div className="cart-widget">               
                 <img src="/files/iconos/carritoVacioBlanco.png" />
-                {/*Agregar CSS:
-                Que no quede azul ni subrayado*/}
                 <span>{cantidadCarrito()}</span>                    
             </div>
         </Link>
