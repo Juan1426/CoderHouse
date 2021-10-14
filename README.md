@@ -1,8 +1,8 @@
-## DiscoLobo
+# DiscoLobo
 
 DiscoLobo es un e-commerce para la venta de remeras, zapatillas y ropa informal.
 
-# Cuenta con:
+## Cuenta con:
 
 - registro y login de usuarios: los campos son validados al realizar el registro
 -  filtro por categorías: tomando las categorías de la base de datos se generan filtros de productos
