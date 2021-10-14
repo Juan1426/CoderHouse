@@ -11,7 +11,7 @@ DiscoLobo es un e-commerce para la venta de remeras, zapatillas y ropa informal.
 - vista de detalles: vista con todos los detalles del producto y la opción de agregar una cantidad del mismo
 - control de stock: revisa que los usuarios no puedan agregar más items al carrito de los que hay disponibles, y revisa el stock real al momento de generar la compra
 
-## Instalación
+## Instalación:
 
 1. Forkeá y cloná el repositorio
 
