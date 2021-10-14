@@ -30,6 +30,10 @@ DiscoLobo es un e-commerce para la venta de remeras, zapatillas y ropa informal,
 
 Uso de Bootstrap para dar formato a la aplicación.
 
-Uso de React Router Dom para la navegación
+Uso de React Router Dom para la navegación.
 
-Uso de FireBase para persistencia de datos
+Uso de FireBase para persistencia de datos.
+
+### Autor
+
+Juan Cruz Caro
