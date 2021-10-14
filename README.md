@@ -1,4 +1,4 @@
-##DiscoLobo
+## DiscoLobo
 
 DiscoLobo es un e-commerce para la venta de remeras, zapatillas y ropa informal.
 
