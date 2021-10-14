@@ -1,6 +1,6 @@
 # DiscoLobo
 
-DiscoLobo es un e-commerce para la venta de remeras, zapatillas y ropa informal.
+DiscoLobo es un e-commerce para la venta de remeras, zapatillas y ropa informal, construido en ReactJS.
 
 ## Cuenta con:
 
@@ -25,3 +25,11 @@ DiscoLobo es un e-commerce para la venta de remeras, zapatillas y ropa informal.
    npm start
    ```
     para correr el proyecto, que estará disponible en http://localhost:3000
+    
+## Dependencias
+
+Uso de Bootstrap para dar formato a la aplicación.
+
+Uso de React Router Dom para la navegación
+
+Uso de FireBase para persistencia de datos
